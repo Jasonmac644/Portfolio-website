@@ -1,0 +1,85 @@
+#navbar{
+  animation: slideInLeft ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+@keyframes slideInLeft {
+  0% {
+
+    opacity: 0;
+  }
+  100% {
+
+    opacity: 1;
+  }
+}
+
+.nav-header{
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 15%;
+  background-color: #dadbd3;
+}
+
+
+
+.menu__box{
+  flex: 25%;
+  user-select: none;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-direction: row;
+  font-size: 1.2em;
+  height: 10vh;
+  background-color: #dadbd3;
+  margin: 0;
+}
+.menu__box > li{
+  margin-left: 3%;
+  margin-right: 2%;
+  display: inline-block;
+  list-style: none;
+}
+
+.menu__box > li >a {
+  color: black;
+  text-decoration: solid;
+}
+
+.menu__box > li:hover{
+  opacity: 70%;
+  transition: opacity 0.5s ease-in-out;
+}
+.menu__box > li >a:hover {
+  cursor: pointer;
+  
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
